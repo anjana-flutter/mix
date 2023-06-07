@@ -121,7 +121,7 @@ class ProfileScreen extends StatelessWidget {
   ProfileScreen({
     required this.name,
     required this.business,
-    required this.achievements,
+    required this.achievements, required String uid,
   });
 
   @override

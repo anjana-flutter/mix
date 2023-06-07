@@ -1,8 +1,6 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../model/user_model.dart';
 import '../provider/auth_provider.dart';
 import '../utils/utils.dart';
@@ -80,7 +78,7 @@ class _UserInfromationScreenState extends State<UserInfromationScreen> {
                           children: [
                             // name field
                             textFeld(
-                              hintText: "John Smith",
+                              hintText: "user name",
                               icon: Icons.account_circle,
                               inputType: TextInputType.name,
                               maxLines: 1,

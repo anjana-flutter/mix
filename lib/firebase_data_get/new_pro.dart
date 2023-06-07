@@ -13,7 +13,7 @@ class _TrainerState extends State<Trainer> {
 // Please replace the Database URL
 // which we will get in “Add Realtime
 // Database” step with DatabaseURL
-    var url = "https://demo1-5acd4-default-rtdb.firebaseio.com/"+"data.json";
+    var url = "https://fir-basic-e73f5-default-rtdb.firebaseio.com/"+"data.json";
 
 // (Do not remove “data.json”,keep it as it is)
     try {
