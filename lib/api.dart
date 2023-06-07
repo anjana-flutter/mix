@@ -19,8 +19,8 @@ class _ItemListState extends State<ItemList> {
   }
 
   Future<void> fetchItems() async {
-    var response = await http.get(
-        Uri.parse('https://reqres.in/api/users?page=$currentPage'));
+    var response = await http
+        .get(Uri.parse('https://reqres.in/api/users?page=$currentPage'));
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       setState(() {
@@ -38,9 +38,7 @@ class _ItemListState extends State<ItemList> {
         backgroundColor: Colors.black,
         elevation: 0,
         titleSpacing: 5,
-        titleTextStyle: TextStyle(
-            letterSpacing: 5, color: Colors.white
-        ),
+        titleTextStyle: TextStyle(letterSpacing: 5, color: Colors.white),
       ),
       body: ListView.builder(
         itemCount: items.length,
@@ -81,32 +79,38 @@ class ItemDetails extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text('${item['first_name']} ${item['last_name']}'),
-        titleTextStyle: TextStyle(
-            letterSpacing: 5, color: Colors.white
-        ),
+        titleTextStyle: TextStyle(letterSpacing: 5, color: Colors.white),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(height: 15,),
-
-          Center(child:
-          CircleAvatar(
-            backgroundImage: NetworkImage(item['avatar']),
-            radius: 100,
-          ),),
+          SizedBox(
+            height: 15,
+          ),
+          Center(
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(item['avatar']),
+              radius: 100,
+            ),
+          ),
           SizedBox(height: 20),
           Row(children: [
-            SizedBox(width: 10,),
-            Text("Name :", style: TextStyle(
-                letterSpacing: 5, fontWeight: FontWeight.bold),),
-            Text('${item['email']}', style: TextStyle(
-              letterSpacing: 5,
-            ),),
+            SizedBox(
+              width: 10,
+            ),
+            Text(
+              "Name :",
+              style: TextStyle(letterSpacing: 5, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              '${item['email']}',
+              style: TextStyle(
+                letterSpacing: 5,
+              ),
+            ),
           ]),
         ],
       ),
-
     );
   }
 }

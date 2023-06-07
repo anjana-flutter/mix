@@ -53,7 +53,7 @@
 // //     stdout.writeln();
 // //   }
 // // }
-import 'package:audioplayers/audioplayers.dart';
+//import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 // class MyHomePage1 extends StatefulWidget {
@@ -129,7 +129,7 @@ class _audioState extends State<audio> {
             child: Text("play"),
             onPressed: () {
               // final player=AudioCache();
-              player.play(AssetSource('Dandelions_.mp3'));
+            //  player.play(AssetSource('Dandelions_.mp3'));
             },
           ),
         ),
@@ -166,4 +166,12 @@ class _audioState extends State<audio> {
       ],
     ));
   }
+}
+
+class AudioPlayer {
+  void resume() {}
+
+  void pause() {}
+
+  void stop() {}
 }
