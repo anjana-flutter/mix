@@ -1,23 +1,18 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 class ItemList extends StatefulWidget {
   @override
   _ItemListState createState() => _ItemListState();
 }
-
 class _ItemListState extends State<ItemList> {
   List<dynamic> items = [];
   int currentPage = 1;
-
   @override
   void initState() {
     super.initState();
     fetchItems();
   }
-
   Future<void> fetchItems() async {
     var response = await http
         .get(Uri.parse('https://reqres.in/api/users?page=$currentPage'));
@@ -28,7 +23,6 @@ class _ItemListState extends State<ItemList> {
       });
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,12 +61,9 @@ class _ItemListState extends State<ItemList> {
     );
   }
 }
-
 class ItemDetails extends StatelessWidget {
   final dynamic item;
-
   ItemDetails({required this.item});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
