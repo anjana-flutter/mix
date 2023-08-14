@@ -1,5 +1,8 @@
+import 'package:basics/ui/home_ui.dart';
+import 'package:basics/ui/page1.dart';
 import 'package:flutter/material.dart';
 import 'linkedin/home_linkedin.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,8 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-    //  home: ProductCatalogScreen(),
-      home: Home_link(),
+      //  home: ProductCatalogScreen(),
+       home: Home_ui(),
+
+      //home: Page_(), //  home: Home_link(),
       // tabBarDemo is watsapp
     );
   }
@@ -170,7 +175,6 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
-
 
 // import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:firebase_core/firebase_core.dart';

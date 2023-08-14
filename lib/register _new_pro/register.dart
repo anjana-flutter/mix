@@ -98,7 +98,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       builder: (context) => ProfileScreen(
                         name: name,
                         business: business,
-                        achievements: achievements,
+                        achievements: achievements, uid: '',
                       ),
                     ),
                   );

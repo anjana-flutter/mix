@@ -1,5 +1,5 @@
+import 'package:basics/linkedin/custom_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class Home_link extends StatefulWidget {
   const Home_link({Key? key}) : super(key: key);
@@ -9,6 +9,7 @@ class Home_link extends StatefulWidget {
 }
 
 class _Home_linkState extends State<Home_link> {
+  Widget _screen1 = Home_link();
   int myintex=0;
   @override
   Widget build(BuildContext context) {
@@ -23,9 +24,9 @@ class _Home_linkState extends State<Home_link> {
         selectedItemColor:Colors.teal ,
         unselectedItemColor: Colors.black87,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
-          BottomNavigationBarItem(icon: SvgPicture.asset('assets/flash.svg',height: 23,width: 20,),label: 'Subscripition'),
-          BottomNavigationBarItem(icon: SvgPicture.asset('assets/wrench.svg',height: 23,width: 20,color: myintex == 0 ? Colors.teal : Colors.black87,),label: 'Garrage'),
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home',),
+          BottomNavigationBarItem(icon: Icon(CustomIcons.flash),label: 'Subscripition'),
+          BottomNavigationBarItem(icon: Icon(CustomIcons.wrench),label: 'Garrage'),
           BottomNavigationBarItem(icon: Icon(Icons.shopping_bag_outlined),label: 'Shop'),
         ],
       ),
@@ -134,7 +135,7 @@ class _Home_linkState extends State<Home_link> {
                     height: 280,
                     width: 390,
                     decoration: BoxDecoration(
-                      // color: Colors.teal.shade400 ,
+
                       gradient: LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,

@@ -45,16 +45,20 @@
 //     stdout.writeln();
 //   }
 // }
-// //void main(){
-// //   for(int i=1;i<=6;i++){
-// //     for(int j=6;j>=i;j--){
-// //       stdout.write("!");
-// //     }
-// //     stdout.writeln();
-// //   }
-// // }
+import 'dart:io';
+
+void main(){
+  for(int i=1;i<=6;i++){
+    for(int j=6;j>=i;j--){
+      stdout.write("!");
+    }
+    stdout.writeln();
+  }
+}
 //import 'package:audioplayers/audioplayers.dart';
-import 'package:flutter/material.dart';
+//import 'dart:io';
+
+//import 'package:flutter/material.dart';
 
 // class MyHomePage1 extends StatefulWidget {
 //   MyHomePage1({Key? key}) : super(key: key);
@@ -108,70 +112,70 @@ import 'package:flutter/material.dart';
 //     );
 //   }
 // }
-class audio extends StatefulWidget {
-  const audio({Key? key}) : super(key: key);
-
-  @override
-  State<audio> createState() => _audioState();
-}
-
-class _audioState extends State<audio> {
-  final player = AudioPlayer();
-
-  // player.setSource(AssetSource('Dandelions_.mp3'));
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-        child: Row(
-      children: [
-        Center(
-          child: ElevatedButton(
-            child: Text("play"),
-            onPressed: () {
-              // final player=AudioCache();
-            //  player.play(AssetSource('Dandelions_.mp3'));
-            },
-          ),
-        ),
-        SizedBox(width: 10),
-        Center(
-          child: ElevatedButton(
-            child: Text("stop"),
-            onPressed: () {
-              // final player=AudioCache();
-              player.stop();
-            },
-          ),
-        ),
-        SizedBox(width: 10),
-        Center(
-          child: ElevatedButton(
-            child: Text("pause"),
-            onPressed: () {
-              // final player=AudioCache();
-              player.pause();
-            },
-          ),
-        ),
-        SizedBox(width: 10),
-        Center(
-          child: ElevatedButton(
-            child: Text("resume"),
-            onPressed: () {
-              // final player=AudioCache();
-              player.resume();
-            },
-          ),
-        ),
-      ],
-    ));
-  }
-}
-
-class AudioPlayer {
-  void resume() {}
-
-  void pause() {}
-
-  void stop() {}
-}
+// class audio extends StatefulWidget {
+//   const audio({Key? key}) : super(key: key);
+//
+//   @override
+//   State<audio> createState() => _audioState();
+// }
+//
+// class _audioState extends State<audio> {
+//   final player = AudioPlayer();
+//
+//   // player.setSource(AssetSource('Dandelions_.mp3'));
+//   @override
+//   Widget build(BuildContext context) {
+//     return SafeArea(
+//         child: Row(
+//       children: [
+//         Center(
+//           child: ElevatedButton(
+//             child: Text("play"),
+//             onPressed: () {
+//               // final player=AudioCache();
+//             //  player.play(AssetSource('Dandelions_.mp3'));
+//             },
+//           ),
+//         ),
+//         SizedBox(width: 10),
+//         Center(
+//           child: ElevatedButton(
+//             child: Text("stop"),
+//             onPressed: () {
+//               // final player=AudioCache();
+//               player.stop();
+//             },
+//           ),
+//         ),
+//         SizedBox(width: 10),
+//         Center(
+//           child: ElevatedButton(
+//             child: Text("pause"),
+//             onPressed: () {
+//               // final player=AudioCache();
+//               player.pause();
+//             },
+//           ),
+//         ),
+//         SizedBox(width: 10),
+//         Center(
+//           child: ElevatedButton(
+//             child: Text("resume"),
+//             onPressed: () {
+//               // final player=AudioCache();
+//               player.resume();
+//             },
+//           ),
+//         ),
+//       ],
+//     ));
+//   }
+// }
+//
+// class AudioPlayer {
+//   void resume() {}
+//
+//   void pause() {}
+//
+//   void stop() {}
+// }
